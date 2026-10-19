@@ -11,7 +11,7 @@
 | Repo | What |
 |---|---|
 | tensai (private until v1.0) | The Android app: chat with GGUF models, tools and phone actions, all on the phone |
-| [llama.kt](https://github.com/hokanosekai/llama.kt) | Kotlin/Android JNI binding for llama.cpp, the engine behind tensai |
+| [llama.kt](https://github.com/tensai-app/llama.kt) | Kotlin/Android JNI binding for llama.cpp, the engine behind tensai |
 
 ### How it works
 
