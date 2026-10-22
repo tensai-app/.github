@@ -6,6 +6,8 @@
 
 <p align="center">On-device AI for Android. Local models, local tools.<br>Nothing leaves the phone unless you turn it on.</p>
 
+<p align="center"><a href="https://tensai.page">tensai.page</a> · <a href="https://tensai.page/docs/">Docs</a> · <a href="https://tensai.page/changelog/">Changelog</a></p>
+
 ---
 
 | Repo | What |
