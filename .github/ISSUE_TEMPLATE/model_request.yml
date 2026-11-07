@@ -1,0 +1,38 @@
+name: Model request
+description: A model that does not load, is rated wrong, or that you want to see supported.
+title: "model: "
+labels: ["model-request"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: Link to the Hugging Face page or the GGUF file.
+    validations:
+      required: true
+  - type: input
+    id: size
+    attributes:
+      label: Size and quant
+      placeholder: "e.g. 3B, Q4_K_M, 1.9 GB"
+  - type: dropdown
+    id: situation
+    attributes:
+      label: What is the problem
+      options:
+        - Rated "Unsupported" (architecture not known to the bundled llama.cpp)
+        - Fails to load
+        - Loads but the output is wrong or garbled
+        - Rated Won't fit or Tight fit and it runs fine
+        - Rated Runs well and it does not
+        - Not in the catalog, I would like it there
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: The exact message or verdict shown, the app version, the phone and its RAM. If the model ran, the benchmark report helps.
+    validations:
+      required: true

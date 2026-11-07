@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/tensai-app/tensai/security/advisories/new
+    about: Report it privately. Do not open a public issue.
+  - name: Docs
+    url: https://tensai.page/docs/
+    about: Install, models, backends, tools, troubleshooting.

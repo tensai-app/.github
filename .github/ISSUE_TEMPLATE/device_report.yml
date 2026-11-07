@@ -1,0 +1,98 @@
+name: Device report
+description: Numbers from your phone (Settings > This device > Benchmark). The app sends nothing, you paste what you choose.
+title: "device: "
+labels: ["device-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every phone widens what can be measured. Steps: load a model, Settings > This device > Benchmark > Run the benchmark (2 to 5 minutes, stoppable), Copy, paste below.
+
+        The app sends nothing. Only what you paste here is shared, and the report has no conversation content. Read it before posting.
+  - type: textarea
+    id: pasted
+    attributes:
+      label: Paste the copied report
+      description: The text the Copy button put in your clipboard. If you paste it here, you can skip the fields below that it already covers.
+      render: text
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      placeholder: "0.3.6 (14)"
+  - type: input
+    id: phone
+    attributes:
+      label: Phone
+      placeholder: "manufacturer and model"
+  - type: input
+    id: soc
+    attributes:
+      label: SoC
+      placeholder: "chipset name"
+  - type: input
+    id: ram
+    attributes:
+      label: RAM
+      placeholder: "e.g. 8.0 GB"
+  - type: input
+    id: android
+    attributes:
+      label: Android version
+      placeholder: "e.g. 14 (API 34)"
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: "name as shown in the app"
+  - type: input
+    id: quant
+    attributes:
+      label: Quant
+      placeholder: "e.g. Q4_K_M"
+  - type: input
+    id: backend
+    attributes:
+      label: Backend
+      placeholder: "CPU or Vulkan"
+  - type: input
+    id: threads
+    attributes:
+      label: Threads
+      placeholder: "a number, or auto"
+  - type: input
+    id: context_sizes
+    attributes:
+      label: Context sizes
+      description: Tokens, in the order of the report.
+      placeholder: "256, 1024, 2048"
+  - type: input
+    id: prefill
+    attributes:
+      label: Prefill tok/s
+      description: One value per context size, same order.
+  - type: input
+    id: decode
+    attributes:
+      label: Decode tok/s
+      description: One value per context size, same order.
+  - type: input
+    id: ttft
+    attributes:
+      label: First token (ms)
+      description: One value per context size, same order.
+  - type: input
+    id: charging
+    attributes:
+      label: Charging
+      placeholder: "yes or no"
+  - type: input
+    id: thermal
+    attributes:
+      label: Thermal status
+      placeholder: "none, light, moderate, severe..."
+  - type: textarea
+    id: notes
+    attributes:
+      label: What broke / notes
+      description: Crash, a model that would not load, a verdict that looked wrong (Runs well / Tight fit / Won't fit), a backend that was faster than the default, anything odd. Empty is fine if all went well.

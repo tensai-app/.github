@@ -1,0 +1,51 @@
+name: Bug report
+description: Something in the app does not work.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not paste conversations, memory content or tokens. Security problems go through "Report a vulnerability" in the Security tab, not here.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Settings > About > Version.
+      placeholder: "0.3.6"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Phone, SoC, RAM, Android version
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model, quant, backend
+      description: Leave empty if no model was involved.
+      placeholder: "Qwen3 1.7B, Q4_K_M, CPU"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Only if you have them, trimmed to the relevant lines. Native llama.cpp messages are under the `llama.cpp` logcat tag.
+      render: text
